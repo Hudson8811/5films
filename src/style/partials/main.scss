@@ -31,6 +31,7 @@ body{
 	padding-top: vw(117);
 	position: relative;
 	z-index: 20;
+	padding-bottom: vw(88);
 }
 
 .wrapper{
@@ -401,4 +402,33 @@ body{
 
 .copy-block{
 	padding: vw(17) vw(27) vw(25);
+	background: #404040;
+	display: inline-block;
+	margin-top: vw(87);
+	&__info{
+		font-weight: normal;
+		font-size: vw(22);
+		text-align: left;
+		color: #8b8b8b;
+		line-height: vw(29);
+		p+p{
+			margin-top: 5px;
+		}
+	}
+	&__links{
+		margin-top: vw(24);
+		p+p{
+			margin-top: 3px;
+		}
+		a{
+			font-weight: normal;
+			font-size: vw(18);
+			text-align: left;
+			color: #8b8b8b;
+			line-height: vw(24);
+			&:hover{
+				color: #b3b3b3;
+			}
+		}
+	}
 }
