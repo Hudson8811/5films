@@ -175,9 +175,26 @@ body{
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	+.movie-block{
+		margin-top: vw(144);
+	}
 	&__left{
 		width: vw(206);
 		padding-top: vw(93);
+	}
+	&__btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 300;
+		font-size: vw(25);
+		text-align: left;
+		color: #fff;
+		width: 100%;
+		height: vw(85);
+		background: rgba(237, 79, 52, 0.7);
+		border: 4px solid rgba(255, 255, 255, 0.53);
+		box-sizing: border-box;
 	}
 	&__right{
 		width: vw(921);
