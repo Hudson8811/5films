@@ -37,6 +37,18 @@ body{
 	overflow: hidden;
 	width: 100%;
 	position: relative;
+	&::before{
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: url("../img/bg_lines.svg") left vw(-332) top repeat-y;
+		background-size: vw(2659) auto;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: vw(580);
+		z-index: -1;
+	}
 }
 
 .header{
@@ -70,11 +82,17 @@ body{
 				background: #872C1C;
 				box-sizing: border-box;
 				margin-right: vw(5);
+				transition: 0.3s ease;
 			}
 			&.active{
 				&::before{
 					background: #ed4f34;
 					border: 1px solid #fff;
+				}
+			}
+			&:hover{
+				&::before{
+					background: #ed4f34;
 				}
 			}
 		}
@@ -172,6 +190,7 @@ body{
 
 
 .movie-block{
+	$self: &;
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
@@ -195,6 +214,10 @@ body{
 		background: rgba(237, 79, 52, 0.7);
 		border: 4px solid rgba(255, 255, 255, 0.53);
 		box-sizing: border-box;
+		transition: 0.3s ease;
+		&:hover{
+			background: rgb(237, 79, 52);
+		}
 	}
 	&__right{
 		width: vw(921);
@@ -210,6 +233,7 @@ body{
 		opacity: 0.74;
 		box-sizing: border-box;
 		display: flex;
+		justify-content: flex-end;
 		align-items: center;
 		padding: 0 vw(27);
 		font-weight: 300;
@@ -219,7 +243,7 @@ body{
 	}
 	&__img
 	{
-		height: vw(517);
+		height: vw(514);
 		width: 100%;
 		position: relative;
 		img{
@@ -268,9 +292,20 @@ body{
 		width: vw(227);
 		padding: vw(15) vw(12) vw(100) vw(15);
 		box-sizing: border-box;
-		background: url("../img/video_staff.svg") center top no-repeat;
-		background-size: 100% 100%;
 		flex-shrink: 0;
+		position: relative;
+		&::before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: url("../img/video_staff.svg") center top no-repeat;
+			background-size: 100% 100%;
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
 		h3{
 			font-weight: 300;
 			font-size: vw(18);
@@ -326,4 +361,44 @@ body{
 			color: #fff;
 		}
 	}
+
+	&:nth-child(even){
+		flex-direction: row-reverse;
+		#{$self}__right{
+			align-items: flex-end;
+		}
+		#{$self}__date{
+			justify-content: flex-start;
+			text-align: left;
+		}
+		#{$self}__img
+		{
+			&::before{
+				left: auto;
+				right: 0;
+			}
+			&::after{
+				right: auto;
+				left: vw(27);
+			}
+		}
+		#{$self}__title{
+			text-align: right;
+		}
+		#{$self}__info{
+			flex-direction: row-reverse;
+		}
+		#{$self}__staff{
+			&::before{
+				transform: scaleX(-1);
+			}
+		}
+		#{$self}__text{
+			align-items: flex-start;
+		}
+	}
+}
+
+.copy-block{
+	padding: vw(17) vw(27) vw(25);
 }
