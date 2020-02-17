@@ -259,8 +259,35 @@ body{
 	}
 	&__info{
 		margin-top: vw(5);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
-	&__staff{}
+	&__staff{
+		width: vw(227);
+		padding: vw(15) vw(12) vw(100) vw(15);
+		box-sizing: border-box;
+		background: url("../img/video_staff.svg") center top no-repeat;
+		background-size: 100% 100%;
+		flex-shrink: 0;
+		h3{
+			font-weight: 300;
+			font-size: vw(18);
+			text-align: left;
+			color: #000;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+			font-weight: normal;
+			font-size: vw(18);
+			text-align: left;
+			color: #000;
+			+h3{
+				margin-top: vw(24);
+			}
+		}
+	}
 	&__text{}
 	&__sponsor{}
 }
