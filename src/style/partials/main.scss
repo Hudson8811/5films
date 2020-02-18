@@ -54,6 +54,11 @@ body{
 		left: 0;
 		top: vw(580);
 		z-index: -1;
+		@include mobile{
+			background: url("../img/bg_lines_2.svg") left vw2(-119) top repeat-y;
+			background-size: vw2(1302) auto;
+			top: vw2(1036);
+		}
 	}
 }
 
@@ -130,12 +135,24 @@ body{
 .static{
 	position: fixed;
 	display: block;
+	&_mob-1{
+		display: none;
+		@include mobile{
+			display: block;
+			width: vw2(201);
+			top: 7vh;
+			left: vw2(124);
+		}
+	}
 	&_1{
 		left: vw(264);
 		top: vw(77);
 		z-index: 3;
 		width: vw(1477);
 		opacity: 0.63;
+		@include mobile{
+			display: none;
+		}
 	}
 	&_2{
 		width: vw(243);
@@ -143,18 +160,33 @@ body{
 		top: vw(117);
 		z-index: 1;
 		opacity: 0.7;
+		@include mobile{
+			width: vw2(82);
+			height: 90vh;
+			top: 5vh;
+			left: vw2(32);
+		}
 	}
 	&_3{
 		width: vw(702);
 		left: vw(472);
 		top: vw(33);
 		z-index: 2;
+		@include mobile{
+			display: none;
+		}
 	}
 	&_4{
 		width: vw(974);
 		left: vw(1419);
 		top: vw(-370);
 		z-index: 4;
+
+		@include mobile{
+			width: vw2(974);
+			left: vw2(809);
+			top: vw2(-270);
+		}
 	}
 
 	&_5{
@@ -163,6 +195,10 @@ body{
 		top: vw(-27);
 		height: vw(540);
 		z-index: 0;
+
+		@include mobile{
+			display: none;
+		}
 	}
 
 	&_6{
@@ -170,6 +206,10 @@ body{
 		left: vw(140);
 		top: vw(213);
 		z-index: 5;
+
+		@include mobile{
+			display: none;
+		}
 	}
 	&_7{
 		font-weight: bold;
@@ -180,11 +220,19 @@ body{
 		left: vw(199);
 		top: vw(180);
 		z-index: 5;
+
+		@include mobile{
+			display: none;
+		}
 	}
 	&_8{
 		left: vw(113);
 		top: vw(353);
 		z-index: 5;
+
+		@include mobile{
+			display: none;
+		}
 		span{
 			display: block;
 			&:nth-child(1){
@@ -221,6 +269,22 @@ body{
 				margin-top: vw2(80);
 				width: vw2(918);
 				margin-left: vw2(135);
+			}
+		}
+	}
+	&_2{
+		.container{
+			@include mobile{
+				width: vw2(960);
+				margin-left: vw2(55);
+			}
+		}
+	}
+	&_3{
+		.container{
+			@include mobile{
+				width: vw2(733);
+				margin-left: vw2(242);
 			}
 		}
 	}
@@ -365,6 +429,9 @@ body{
 	padding-top: vw(115);
 	.statics{
 		position: relative;
+		@include mobile{
+			display: none;
+		}
 	}
 	.static{
 		position: absolute;
@@ -758,6 +825,10 @@ body{
 		text-align: left;
 		color: #fff5d9;
 		line-height: vw(50);
+		@include mobile{
+			font-size: vw2(38);
+			line-height: vw2(50);
+		}
 		+p{
 			margin-top: 1em;
 		}
@@ -769,6 +840,7 @@ body{
 
 
 .about{
+	$self: &;
 	&__pagetitle{
 		font-weight: 300;
 		font-size: vw(65);
@@ -777,9 +849,18 @@ body{
 		margin-left: vw(-100);
 		line-height: vw(86);
 		margin-bottom: vw(15);
+		@include mobile{
+			font-size: vw2(65);
+			margin-left: vw(-5);
+			line-height: vw2(86);
+			margin-bottom: vw2(15);
+		}
 	}
 	&__img{
 		width: vw(960);
+		@include mobile{
+			width: 100%;
+		}
 		img{
 			width: 100%;
 			filter: saturate(0);
@@ -787,20 +868,39 @@ body{
 		}
 		&_2{
 			margin-top: vw(48);
+			@include mobile{
+				margin-top: vw2(48);
+			}
 		}
 		&_3{
 			margin-top: vw(152);
+			@include mobile{
+				margin-top: vw2(152);
+			}
 		}
 	}
 	&__info{
 		display: flex;
+		&_1{
+			#{$self}__right{
+				@include mobile{
+					display: none;
+				}
+			}
+		}
 		&_2{
 			margin-top: vw(51);
+			@include mobile{
+				margin-top: vw2(51);
+			}
 		}
 	}
 	&__left{
 		width: vw(280);
 		flex-shrink: 0;
+		@include mobile{
+			width: vw2(280);
+		}
 		h3{
 			font-weight: 300;
 			font-size: vw(53);
@@ -809,25 +909,46 @@ body{
 			padding: vw(6) vw(12) vw(11);
 			background: rgba(237, 79, 52, 0.7);
 			display: inline-block;
+			@include mobile{
+				font-size: vw2(53);
+				padding: vw2(6) vw2(12) vw2(11);
+			}
 		}
 	}
 	&__right{
 		width: vw(670);
 		padding-top: vw(8);
 		margin-left: vw(18);
+		@include mobile{
+			width: vw2(670);
+			padding-top: vw2(8);
+			margin-left: vw2(18);
+		}
 		p {
 			font-weight: 300;
 			font-size: vw(21);
 			text-align: left;
 			color: #fff5d9;
 			line-height: vw(28);
+
+			@include mobile{
+				font-size: vw2(21);
+				line-height: vw2(28);
+			}
 		}
 	}
 	&__map{
 		margin-top: vw(50);
 		width: vw(960);
+		height: vw(588);
+		@include mobile{
+			width: 100%;
+			margin-top: vw2(50);
+			height: vw2(588);
+		}
 		iframe{
 			width: 100%;
+			height: 100%;
 		}
 	}
 }
