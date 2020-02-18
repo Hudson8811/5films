@@ -296,15 +296,41 @@ body{
 	z-index: 1;
 	height: vw(1080);
 
+	@include mobile{
+		height: 100vh;
+		min-height: vw2(1300);
+	}
+
 	.static{
 		position: absolute;
 		&_1{
 			opacity: 1;
+			@include mobile{
+				display: block;
+				width: vw2(1481);
+				left: vw2(153);
+				top: vw2(306);
+				z-index: 5;
+			}
 		}
 		&_2{
 			top: vw(168);
 			opacity: 1;
+			@include mobile{
+				position: fixed;
+				opacity: 0.7;
+
+			}
 		}
+		&_3{
+			@include mobile{
+				display: block;
+				width: vw2(702);
+				top: vw2(117);
+				left: vw2(472);
+			}
+		}
+		&_4{}
 	}
 	&__date{
 		font-family: $font2;
@@ -317,6 +343,12 @@ body{
 		padding-top: vw(88);
 		margin-left: vw(64);
 		z-index: 5;
+		@include mobile{
+			padding-left: vw2(53);
+			padding-top: vw2(180);
+			margin-left: vw2(64);
+			font-size: vw2(73);
+		}
 		&::after{
 			content: "";
 			display: block;
@@ -328,21 +360,76 @@ body{
 			position: relative;
 			left: vw(-53);
 			z-index: -1;
+			@include mobile{
+				margin-top: vw2(-7);
+				left: vw2(-53);
+				width: vw2(910);
+				height: vw2(11);
+			}
+		}
+	}
+	&__mob-1{
+		display: none;
+		@include mobile{
+			position: absolute;
+			width: vw2(258);
+			left: vw2(308);
+			top: vw2(588);
+			display: block;
+		}
+	}
+	&__mob-2{
+		display: none;
+		@include mobile{
+			position: absolute;
+			width: vw2(481);
+			left: vw2(115);
+			bottom: vw2(-90);
+			display: block;
 		}
 	}
 
+	&__mob-3{
+		display: none;
+		@include mobile{
+			display: block;
+			position: absolute;
+			width: vw2(595);
+			right: vw2(-44);
+			top: auto;
+			bottom: vw2(115);
+			z-index: 10;
+		}
+	}
+	&__mob-4{
+		display: none;
+		@include mobile{
+			display: block;
+			position: absolute;
+			width: vw2(23);
+			left: vw2(865.5);
+			top: vw2(526.7);
+			z-index: 11;
+		}
+	}
 	&__1{
 		position: absolute;
 		width: vw(421);
 		left: vw(403);
 		top: vw(281);
 		z-index: 1;
+		@include mobile{
+			display: none;
+		}
 	}
 	&__2{
 		position: absolute;
 		width: vw(509);
 		left: vw(115);
 		top: vw(891);
+		@include mobile{
+			display: none;
+		}
 	}
 	&__3{
 		position: absolute;
@@ -350,6 +437,9 @@ body{
 		right: vw(10);
 		top: vw(879);
 		z-index: 10;
+		@include mobile{
+			display: none;
+		}
 	}
 	&__5{
 		position: absolute;
@@ -357,6 +447,13 @@ body{
 		top: vw(181);
 		left: vw(835);
 		z-index: 10;
+		@include mobile{
+			width: vw2(553);
+			height: vw2(681);
+			z-index: 1;
+			left: vw2(468);
+			top: vw2(405);
+		}
 	}
 	&__6{
 		position: absolute;
@@ -364,6 +461,12 @@ body{
 		left: vw(962);
 		top: vw(298);
 		z-index: 11;
+		@include mobile{
+			width: vw2(302);
+			z-index: 2;
+			left: vw2(595);
+			top: vw2(522);
+		}
 	}
 	&__7{
 		font-weight: bold;
@@ -374,12 +477,23 @@ body{
 		left: vw(1046);
 		top: vw(250);
 		z-index: 12;
+		@include mobile{
+			z-index: 6;
+			font-size: vw2(252);
+			left: vw2(679);
+			top: vw2(480);
+		}
 	}
 	&__8{
 		position: absolute;
 		z-index: 13;
 		left: vw(797);
 		top: vw(480);
+		@include mobile{
+			z-index: 6;
+			left: vw2(430);
+			top: vw2(704);
+		}
 		span{
 			display: block;
 			&:nth-child(1){
@@ -388,6 +502,10 @@ body{
 				font-size: vw(139);
 				text-align: left;
 				color: #000;
+				@include mobile{
+					line-height: vw2(184);
+					font-size: vw2(139);
+				}
 			}
 			&:nth-child(2){
 				font-family: $font2;
@@ -398,6 +516,11 @@ body{
 				color: #000;
 				margin-left: vw(269);
 				margin-top: vw(-40);
+				@include mobile{
+					font-size: vw2(68);
+					margin-top: vw2(-40);
+					margin-left: vw2(269);
+				}
 			}
 		}
 	}
@@ -408,6 +531,9 @@ body{
 		top: vw(750);
 		z-index: 11;
 		transform: rotate(-18deg);
+		@include mobile{
+			display: none;
+		}
 	}
 	&__image{
 		width: vw(246);
@@ -427,6 +553,12 @@ body{
 
 .second-screen{
 	padding-top: vw(115);
+	@include mobile{
+		padding-top: vw2(50);
+		.container{
+			padding-top: 0;
+		}
+	}
 	.statics{
 		position: relative;
 		@include mobile{
