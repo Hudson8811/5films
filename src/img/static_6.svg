@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="302" height="247.886" viewBox="0 0 302 247.886">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="23" height="197.267" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="_312321_" data-name="312321+" transform="translate(-962 -298)">
+    <path id="Path_48" data-name="Path 48" d="M0,0H302V206H233.731v41.886L168,206H0Z" transform="translate(962 298)" fill="#313131" opacity="0.98"/>
+    <g id="Repeat_Grid_1" data-name="Repeat Grid 1" transform="translate(980.234 301.824)" opacity="0.52" clip-path="url(#clip-path)">
+      <g transform="translate(-1146.234 -430.824)">
+        <rect id="Rectangle_31" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -389.824)">
+        <rect id="Rectangle_31-2" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -348.824)">
+        <rect id="Rectangle_31-3" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -307.824)">
+        <rect id="Rectangle_31-4" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -266.824)">
+        <rect id="Rectangle_31-5" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Repeat_Grid_2" data-name="Repeat Grid 2" transform="translate(1232.234 301.824)" opacity="0.52" clip-path="url(#clip-path)">
+      <g transform="translate(-1146.234 -430.824)">
+        <rect id="Rectangle_31-6" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -389.824)">
+        <rect id="Rectangle_31-7" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -348.824)">
+        <rect id="Rectangle_31-8" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -307.824)">
+        <rect id="Rectangle_31-9" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+      <g transform="translate(-1146.234 -266.824)">
+        <rect id="Rectangle_31-10" data-name="Rectangle 31" width="17" height="19" rx="2" transform="translate(1146.234 436.824)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
